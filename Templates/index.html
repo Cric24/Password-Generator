@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Password Generator</h1>
+        <form action="/generate_password" method="post">
+            <div class="form-group">
+                <label for="length">Password Length:</label>
+                <input type="number" id="length" name="length" min="6" max="20" class="form-control" required>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowercase" name="lowercase">
+                <label class="form-check-label" for="lowercase">Include lowercase letters</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="uppercase" name="uppercase">
+                <label class="form-check-label" for="uppercase">Include uppercase letters</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="digits" name="digits">
+                <label class="form-check-label" for="digits">Include digits (0-9)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="special" name="special">
+                <label class="form-check-label" for="special">Include special characters (!@#$%...)</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Generate Password</button>
+        </form>
+    </div>
+</body>
+</html>
